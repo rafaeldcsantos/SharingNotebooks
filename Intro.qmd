@@ -1,0 +1,13 @@
+---
+title: "Untitled"
+format: html
+---
+
+# Yay!
+
+A quarto document?
+
+```{python}
+3+2
+```
+
