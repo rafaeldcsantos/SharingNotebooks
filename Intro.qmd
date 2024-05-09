@@ -1,13 +1,100 @@
 ---
-title: "Untitled"
+title: "Sharing Notebooks"
+subtitle: "How to create a Quarto-based notebook using Visual Studio Code and share it in Github"
+lightbox: true
 format: html
 ---
 
-# Yay!
+# About
+
+This document is still under construction! Come back in a few days.
+
+# Prerequisites
+
+* Have a [github account](https://github.com) configured so you can connect via SSH (see [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) and [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), and [Push to GitHub without a password using ssh-key](https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key) in case of errors).
+* Install [Visual Studio Code](https://code.visualstudio.com/download).
+* Install [Quarto](https://quarto.org/docs/get-started/).
+
+# Creating a repository on Github
+
+![](Resources/github.webp){.lightbox}
+
 
 A quarto document?
 
 ```{python}
 3+2
 ```
+
+# ERRORROR
+
+0) Entre no Github como rafaeldcsantos@gmail.com (vai precisar da senha e 2FA)
+Mostrar screenshot
+1) No Github, crie um repositório, no caso, PopSci. 
+Mostrar screenshot vazio
+Mostrar screenshot cheio
+Mostrar repo criado
+2) Vá em settings/pages e deploy from a branch - main/docs e save
+Mostrar alterações
+3) Voltamos para a págian do repo
+Agora tenho um link para ele: https://github.com/rafaeldcsantos/PopSci.git
+ou copiamos da ur
+Mostrar menu de copiar.
+4) Na linha de comando ou onde preferir
+Ir para um diretorio base, o meu e /home/rafael/code
+Dentro dele criar um com nome compativel
+mkdir /Users/rafael/Dropbox/Code/SharingNotebooks
+CD para este
+
+Teste ssh com
+  ssh -T git@github.com
+  Hi rafaeldcsantos! You've successfully authenticated, but GitHub does not provide shell access.
+
+git clone https://github.com/rafaeldcsantos/SharingNotebooks.git .
+Devem apareceer o LICENSE e README.md
+
+touch .nojekyll
+
+ 9950  Edit README.md
+ 9951  git add .
+ 9952  git commit -m "Your commit message here"
+
+git remote set-url origin git@github.com:rafaeldcsantos/SharingNotebooks.git
+
+git push -u origin main funcionou!
+
+======================
+Agora criar o notebook.
+Visual Code Studio
+
+File/New File/Quarto Document
+
+Change to dhis:
+
+--------------------------------------------------------
+
+
+
+--------------------------------------------------------
+
+Create yml:
+
+
+Then update:
+
+git add .
+git commit -m "Add index.html to docs folder"
+git push origin main
+
+OK!
+
+
+git add .:
+This command stages all changes in the current directory and its subdirectories for the next commit. The dot (.) represents the current directory. When you run git add ., Git adds all modified files and new files (but not deleted files) to the staging area.
+git commit -m "Add index.html to docs folder":
+This command creates a new commit with the changes staged in the previous step. The -m flag allows you to specify a commit message inline. In this case, the commit message is "Add index.html to docs folder", which describes the changes made in the commit.
+git push origin main:
+This command pushes the commits in your local main branch to the remote repository (origin), which is typically your GitHub repository. It updates the main branch on GitHub with the commits you've made locally.
+
+
 

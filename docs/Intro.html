@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Untitled</title>
+<title>Sharing Notebooks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="Intro_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="Intro_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="Intro_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Intro_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="Intro_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="Intro_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 
 
 </head>
@@ -79,7 +82,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Untitled</h1>
+<h1 class="title">Sharing Notebooks</h1>
+<p class="subtitle lead">How to create a Quarto-based notebook using Visual Studio Code and share it in Github</p>
 </div>
 
 
@@ -96,15 +100,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="yay" class="level1">
-<h1>Yay!</h1>
+<section id="about" class="level1">
+<h1>About</h1>
+<p>This document is still under construction! Come back in a few days.</p>
+</section>
+<section id="prerequisites" class="level1">
+<h1>Prerequisites</h1>
+<ul>
+<li>Have a <a href="https://github.com">github account</a> configured so you can connect via SSH (see <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a> and <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Adding a new SSH key to your GitHub account</a>, and <a href="https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key">Push to GitHub without a password using ssh-key</a> in case of errors).</li>
+<li>Install <a href="https://code.visualstudio.com/download">Visual Studio Code</a>.</li>
+<li>Install <a href="https://quarto.org/docs/get-started/">Quarto</a>.</li>
+</ul>
+</section>
+<section id="creating-a-repository-on-github" class="level1">
+<h1>Creating a repository on Github</h1>
+<p><a href="Resources/github.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="Resources/github.webp" class="img-fluid"></a></p>
 <p>A quarto document?</p>
-<div id="963ca742" class="cell" data-execution_count="1">
+<div id="6a697ebf" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="op">+</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>5</code></pre>
 </div>
 </div>
+</section>
+<section id="errorror" class="level1">
+<h1>ERRORROR</h1>
+<ol start="0" type="1">
+<li>Entre no Github como rafaeldcsantos@gmail.com (vai precisar da senha e 2FA) Mostrar screenshot</li>
+<li>No Github, crie um repositório, no caso, PopSci. Mostrar screenshot vazio Mostrar screenshot cheio Mostrar repo criado</li>
+<li>Vá em settings/pages e deploy from a branch - main/docs e save Mostrar alterações</li>
+<li>Voltamos para a págian do repo Agora tenho um link para ele: https://github.com/rafaeldcsantos/PopSci.git ou copiamos da ur Mostrar menu de copiar.</li>
+<li>Na linha de comando ou onde preferir Ir para um diretorio base, o meu e /home/rafael/code Dentro dele criar um com nome compativel mkdir /Users/rafael/Dropbox/Code/SharingNotebooks CD para este</li>
+</ol>
+<p>Teste ssh com ssh -T git@github.com Hi rafaeldcsantos! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+<p>git clone https://github.com/rafaeldcsantos/SharingNotebooks.git . Devem apareceer o LICENSE e README.md</p>
+<p>touch .nojekyll</p>
+<p>9950 Edit README.md 9951 git add . 9952 git commit -m “Your commit message here”</p>
+<p>git remote set-url origin git@github.com:rafaeldcsantos/SharingNotebooks.git</p>
+<p>git push -u origin main funcionou!</p>
+<p>====================== Agora criar o notebook. Visual Code Studio</p>
+<p>File/New File/Quarto Document</p>
+<p>Change to dhis:</p>
+<hr>
+<hr>
+<p>Create yml:</p>
+<p>Then update:</p>
+<p>git add . git commit -m “Add index.html to docs folder” git push origin main</p>
+<p>OK!</p>
+<p>git add .: This command stages all changes in the current directory and its subdirectories for the next commit. The dot (.) represents the current directory. When you run git add ., Git adds all modified files and new files (but not deleted files) to the staging area. git commit -m “Add index.html to docs folder”: This command creates a new commit with the changes staged in the previous step. The -m flag allows you to specify a commit message inline. In this case, the commit message is “Add index.html to docs folder”, which describes the changes made in the commit. git push origin main: This command pushes the commits in your local main branch to the remote repository (origin), which is typically your GitHub repository. It updates the main branch on GitHub with the commits you’ve made locally.</p>
 </section>
 
 </main>
@@ -519,6 +562,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
