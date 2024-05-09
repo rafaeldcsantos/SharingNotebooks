@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -114,24 +80,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="creating-a-repository-on-github" class="level1">
 <h1>Creating a repository on Github</h1>
+<p>Go to your <a href="https://github.com">github account</a>, click on the Plus icon (see image below) and create a New Repository.</p>
 <p><a href="Resources/github.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="Resources/github.webp" class="img-fluid"></a></p>
-<p>A quarto document?</p>
-<div id="6a697ebf" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="op">+</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>5</code></pre>
-</div>
-</div>
+<p>Here’s the page asking for the new repository information:</p>
+<p><a href="Resources/newrepo-empty.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="Resources/newrepo-empty.webp" class="img-fluid"></a></p>
+<p>And here it is, filled. The repository name will be <code>SharingNotebooks</code>, we will add a <code>README</code> file and I chose the <code>MIT License</code>:</p>
+<p><a href="Resources/newrepo-filled.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="Resources/newrepo-filled.webp" class="img-fluid"></a></p>
+<p>Click on the <code>Create repository</code> button and it will be created and shown in the browser (see figure below).</p>
+<p><a href="Resources/repocreated.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="Resources/repocreated.webp" class="img-fluid"></a></p>
+<p>Now we need to set up a page based on this repository. Click on the <code>Settings</code> option icon (the one with the gears), that will= bring a page where we can set options for the repository:</p>
+<p><a href="Resources/settings.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="Resources/settings.webp" class="img-fluid"></a></p>
+<p>On the left menu, select <code>Pages</code>. In the <code>Source</code> section chose <code>Deploy from a branch</code>, and for <code>Branch</code> select <code>main</code> and for <code>folder</code> choose <code>docs/</code>. Options should look like the ones in the figure below. Click on <code>Save</code>.</p>
+<p><a href="Resources/pages.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="Resources/pages.webp" class="img-fluid"></a></p>
+<p>Clicking on the repository name should bring you back to the main repository window.</p>
 </section>
 <section id="errorror" class="level1">
 <h1>ERRORROR</h1>
-<ol start="0" type="1">
-<li>Entre no Github como rafaeldcsantos@gmail.com (vai precisar da senha e 2FA) Mostrar screenshot</li>
-<li>No Github, crie um repositório, no caso, PopSci. Mostrar screenshot vazio Mostrar screenshot cheio Mostrar repo criado</li>
-<li>Vá em settings/pages e deploy from a branch - main/docs e save Mostrar alterações</li>
-<li>Voltamos para a págian do repo Agora tenho um link para ele: https://github.com/rafaeldcsantos/PopSci.git ou copiamos da ur Mostrar menu de copiar.</li>
-<li>Na linha de comando ou onde preferir Ir para um diretorio base, o meu e /home/rafael/code Dentro dele criar um com nome compativel mkdir /Users/rafael/Dropbox/Code/SharingNotebooks CD para este</li>
-</ol>
+<p>Agora tenho um link para ele: https://github.com/rafaeldcsantos/PopSci.git ou copiamos da ur Mostrar menu de copiar. 4) Na linha de comando ou onde preferir Ir para um diretorio base, o meu e /home/rafael/code Dentro dele criar um com nome compativel mkdir /Users/rafael/Dropbox/Code/SharingNotebooks CD para este</p>
 <p>Teste ssh com ssh -T git@github.com Hi rafaeldcsantos! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 <p>git clone https://github.com/rafaeldcsantos/SharingNotebooks.git . Devem apareceer o LICENSE e README.md</p>
 <p>touch .nojekyll</p>
@@ -562,7 +527,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

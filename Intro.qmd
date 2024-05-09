@@ -17,26 +17,38 @@ This document is still under construction! Come back in a few days.
 
 # Creating a repository on Github
 
+Go to your [github account](https://github.com), click on the Plus icon (see image below) and create a New Repository.
+
 ![](Resources/github.webp){.lightbox}
 
+Here's the page asking for the new repository information:
 
-A quarto document?
+![](Resources/newrepo-empty.webp){.lightbox}
 
-```{python}
-3+2
-```
+And here it is, filled. The repository name will be `SharingNotebooks`, we will add a `README` file and I chose the `MIT License`:
+
+![](Resources/newrepo-filled.webp){.lightbox}
+
+Click on the `Create repository` button and it will be created and shown in the browser (see figure below).
+
+![](Resources/repocreated.webp){.lightbox}
+
+
+Now we need to set up a page based on this repository. Click on the `Settings` option icon (the one with the gears), that will= bring a page where we can set options for the repository:
+
+![](Resources/settings.webp){.lightbox}
+
+On the left menu, select `Pages`. In the `Source` section chose `Deploy from a branch`, and for `Branch` select `main` and for `folder` choose `docs/`. Options should look like the ones in the figure below. Click on `Save`. 
+
+![](Resources/pages.webp){.lightbox}
+
+Clicking on the repository name should bring you back to the main repository window. 
+
+
 
 # ERRORROR
 
-0) Entre no Github como rafaeldcsantos@gmail.com (vai precisar da senha e 2FA)
-Mostrar screenshot
-1) No Github, crie um repositório, no caso, PopSci. 
-Mostrar screenshot vazio
-Mostrar screenshot cheio
-Mostrar repo criado
-2) Vá em settings/pages e deploy from a branch - main/docs e save
-Mostrar alterações
-3) Voltamos para a págian do repo
+
 Agora tenho um link para ele: https://github.com/rafaeldcsantos/PopSci.git
 ou copiamos da ur
 Mostrar menu de copiar.
