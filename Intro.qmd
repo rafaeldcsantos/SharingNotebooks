@@ -22,7 +22,7 @@ This document is still under construction! Come back in a few days.
 
 # Creating a repository on GitHub
 
-Go to your [GitHub account](https://github.com), click on the Plus icon (see [GitHub main window](#fig-settings)) and create a New Repository (1).
+Go to your [GitHub account](https://github.com), click on the Plus icon (see [GitHub main window](#fig-github)) and create a New Repository (1).
 
 ![GitHub main window](Resources/github.webp){.lightbox #fig-github}
 
@@ -35,6 +35,7 @@ Figure [Creating a new repository (filled)](#fig-newrepo-filled) shows the page 
 
 ![Creating a new repository (filled)](Resources/newrepo-filled.webp){.lightbox}
 
+# duh
 
 Click on the `Create repository` button (5) to create the repository.
 
@@ -151,3 +152,10 @@ Then update:
 
 OK!
 
+
+The first figure is here:
+[GitHub main window](#fig-settings).
+
+
+
+[link to Figure A](#fig-A)
