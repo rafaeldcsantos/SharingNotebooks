@@ -22,38 +22,30 @@ This document is still under construction! Come back in a few days.
 
 # Creating a repository on GitHub
 
-Go to your [GitHub account](https://github.com), click on the Plus icon (see [GitHub main window](#fig-github)) and create a New Repository (1).
+Go to your [GitHub account](https://github.com), click on the Plus icon (see Figure [GitHub main window](#fig-github)) and create a New Repository (1).
 
 ![GitHub main window](Resources/github.webp){.lightbox #fig-github}
 
 Figure [Creating a new repository](#fig-newrepo-empty) shows the page that asks for the new repository information. 
-Fill the repository name (2), choose `Add a README file` (3) and choose a licence (4):
+Fill the repository name (2), choose `Add a README file` (3) and choose a license (4).
 
 ![Creating a new repository (empty)](Resources/newrepo-empty.webp){.lightbox #fig-newrepo-empty}
 
-Figure [Creating a new repository (filled)](#fig-newrepo-filled) shows the page with the new repository information. 
+Figure [Creating a new repository (filled)](#fig-newrepo-filled) shows the page with the new repository information. Click on the `Create repository` button (5) to create the repository.
 
-![Creating a new repository (filled)](Resources/newrepo-filled.webp){.lightbox}
+![Creating a new repository (filled)](Resources/newrepo-filled.webp){.lightbox #fig-newrepo-filled}
 
-# duh
+The repository is created and the browser should show its basic information. Now we need to set up a page based on this repository. Click on the `Settings` option (6) in Figure [GitHub page showing the new repository](#fig-repocreated2).
 
-Click on the `Create repository` button (5) to create the repository.
+![GitHub page showing the new repository](Resources/repocreated2.webp){.lightbox #fig-repocreated2}
 
-The repository is created and the browser should show its basic information:
+That will bring a page where we can set options for the repository (Figure [Settings for the repository](#fig-settings)). On the left menu, select `Pages` (7). 
 
-![](Resources/repocreated.webp){.lightbox}
+![Settings for the repository](Resources/settings.webp){.lightbox #fig-settings}
 
-Now we need to set up a page based on this repository. Click on the `Settings` option (6).
+In the `Source` section (8) chose `Deploy from a branch`, and for `Branch` select `main` and for `folder` choose `docs/`. Options should look like the ones in the figure below. Click on `Save` (9) (see Figure [Page settings for the repository](#fig-pages)). 
 
-![](Resources/repocreated2.webp){.lightbox}
-
-That will= bring a page where we can set options for the repository. On the left menu, select `Pages` (7). 
-
-![](Resources/settings.webp){.lightbox}
-
-In the `Source` section (8) chose `Deploy from a branch`, and for `Branch` select `main` and for `folder` choose `docs/`. Options should look like the ones in the figure below. Click on `Save` (9). 
-
-![](Resources/pages.webp){.lightbox}
+![Page settings for the repository](Resources/pages.webp){.lightbox #fig-pages}
 
 Clicking on the repository name should bring you back to the main repository window. 
 
@@ -89,7 +81,7 @@ From that point on, all changes you do to any file in the work directory can be 
 
 # Creating a Quarto Document
 
-Use Visual Code Studio to create a file with extension `.qmd` in the directory we ran the git commands. The `.qmd` file is a pure text file; any editor could be used, but Visual Code Studio is a good, free IDE which integrates nicely with Quarto.
+Use Visual Code Studio to create a file with extension `.qmd` in the directory we ran the git commands. The `.qmd` file is a pure text file; any editor could be used, I recommend Visual Code Studio since it is a good, free IDE which integrates nicely with Quarto.
 
 Create the file with the menu option 
 `File`/`New File`/`Quarto Document`. A simple boilerplate file will be created. 
@@ -102,60 +94,32 @@ Add some Markdown code to the file and save it with a descriptive filename (in o
 
 Quarto files will be converted to HTML (HyperText Markup Language), which is the markup language for documents that will be displayed in web browsers. In most cases we can to provide additional instructions on how the files will be converted through instructions in a `_quarto.yml` file. 
 
-Create a `_quarto.yml` in the same directory where the `Intro.qmd` is locate. Its contents should be:
+Create a `_quarto.yml` in the same directory where the `Intro.qmd` is located. Its contents should be:
  
 ```
 project:
   output-dir: docs
 ```
 
-These instructions basically ensure that all results from the conversion will be stored in the directory `docs` under the working directory. This is the same directory we used to indicate which is the destination directory for the pages we've set up in GitHub (figure XX)
+These instructions basically ensure that all results from the conversion will be stored in the directory `docs` under the working directory. This is the same directory we used as the destination directory for the pages we've set up in GitHub (see Figure [Page settings for the repository](#fig-pages)). 
 
+# yyyy 
 
-Another important step is to give Quarto instructions on how the conversion from `.qmd` file to `.html` where the 
+Now we need to convert this `.qmd` file to `.html` for displaying in a browser. In Visual Studio Code (see Figure [Converting and displaying `.qmd` files in Visual Studio Code](#fig-runningquarto)) click on the `Preview` button (10). If all Quarto tools are installed correctly and there are no errors on the Markdown file it will be converted to HTML, and success or error messages will be displayed in the terminal (11) and rendered result displayed in the Preview window (12): 
 
-# yyyy
+![Converting and displaying `.qmd` files in Visual Studio Code](Resources/VSCode.webp){.lightbox #fig-runningquarto}
 
-Now we need to convert this `.qmd` file to `.html` for displaying in a browser. In Visual Studio Code click on the `Preview` button (10). If all Quarto tools are installed correctly and there is no error on the Markdown file it will be converted to HTML, with success or error messages displayed in the terminal (11) and rendered result displayed in the Preview window (12): 
+Now that we have the `.html` file generated from the `.qmd` file we need to push our project back to GitHub. Just run these commands:
 
-![](Resources/VSCode.webp){.lightbox}
+1. `git add .`
+1. `git commit -m "Be sure to use meaningful comments!"`
+1. `git push origin main`
 
-Now that we have 
+Now open the URL []() to see the rendered file as a GitHub page!
 
-# xxxxxx
+# In case
 
 In this example the GitHub user name is `rafaeldcsantos` and the repository is `SharingNotebooks`. These are used to compose the remote repository URL:  `https://github.com/rafaeldcsantos/SharingNotebooks.git`. Yours of course will be different; please keep this in mind when creating a repository under your GitHub account.  
 :::
 
 
-
-Change to dhis:
-
-----------------------------------
----
-title: "Sharing Notebooks"
-subtitle: "How to create a Quarto-based notebook using Visual Studio Code and share it in GitHub"
-lightbox: true
-toc: true
-format: html
----
-
-
---------------------------------------------------------
-
-Create yml:
-
-
-Then update:
-
-
-
-OK!
-
-
-The first figure is here:
-[GitHub main window](#fig-settings).
-
-
-
-[link to Figure A](#fig-A)
