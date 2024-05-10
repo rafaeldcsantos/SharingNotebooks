@@ -2,89 +2,142 @@
 title: "Sharing Notebooks"
 subtitle: "How to create a Quarto-based notebook using Visual Studio Code and share it in Github"
 lightbox: true
+toc: true
 format: html
 ---
 
 # About
 
+This document shows the steps required to create a Github repository, create a site based on it, clone the repository, add content using Visual Study Code and Quatro and push it back to Github so the content can be served as an interactive notebook.
+
+:::{.callout-warning}
 This document is still under construction! Come back in a few days.
+:::
 
 # Prerequisites
 
 * Have a [github account](https://github.com) configured so you can connect via SSH (see [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) and [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), and [Push to GitHub without a password using ssh-key](https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key) in case of errors).
-* Install [Visual Studio Code](https://code.visualstudio.com/download).
-* Install [Quarto](https://quarto.org/docs/get-started/).
+* Install the [Quarto](https://quarto.org/docs/get-started/) document authoring system.
+* Install the [Visual Studio Code](https://code.visualstudio.com/download) Integrated Development Environment (IDE) and the [Quarto VS Code Extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto).
 
 # Creating a repository on Github
 
-Go to your [github account](https://github.com), click on the Plus icon (see image below) and create a New Repository.
+Go to your [Github account](https://github.com), click on the Plus icon (see [Github main window](#fig-settings)) and create a New Repository (1).
 
-![](Resources/github.webp){.lightbox}
+![Github main window](Resources/github.webp){.lightbox #fig-github}
 
-Here's the page asking for the new repository information:
+Figure [Creating a new repository](#fig-newrepo-empty) shows the page that asks for the new repository information. 
+Fill the repository name (2), choose `Add a README file` (3) and choose a licence (4):
 
-![](Resources/newrepo-empty.webp){.lightbox}
+![Creating a new repository (empty)](Resources/newrepo-empty.webp){.lightbox #fig-newrepo-empty}
 
-And here it is, filled. The repository name will be `SharingNotebooks`, we will add a `README` file and I chose the `MIT License`:
+Figure [Creating a new repository (filled)](#fig-newrepo-filled) shows the page with the new repository information. 
 
-![](Resources/newrepo-filled.webp){.lightbox}
+![Creating a new repository (filled)](Resources/newrepo-filled.webp){.lightbox}
 
-Click on the `Create repository` button and it will be created and shown in the browser (see figure below).
+
+Click on the `Create repository` button (5) to create the repository.
+
+The repository is created and the browser should show its basic information:
 
 ![](Resources/repocreated.webp){.lightbox}
 
+Now we need to set up a page based on this repository. Click on the `Settings` option (6).
 
-Now we need to set up a page based on this repository. Click on the `Settings` option icon (the one with the gears), that will= bring a page where we can set options for the repository:
+![](Resources/repocreated2.webp){.lightbox}
+
+That will= bring a page where we can set options for the repository. On the left menu, select `Pages` (7). 
 
 ![](Resources/settings.webp){.lightbox}
 
-On the left menu, select `Pages`. In the `Source` section chose `Deploy from a branch`, and for `Branch` select `main` and for `folder` choose `docs/`. Options should look like the ones in the figure below. Click on `Save`. 
+In the `Source` section (8) chose `Deploy from a branch`, and for `Branch` select `main` and for `folder` choose `docs/`. Options should look like the ones in the figure below. Click on `Save` (9). 
 
 ![](Resources/pages.webp){.lightbox}
 
 Clicking on the repository name should bring you back to the main repository window. 
 
+::: {.callout-note}
+In this example the Github user name is `rafaeldcsantos` and the repository is `SharingNotebooks`. These are used to compose the remote repository URL:  `https://github.com/rafaeldcsantos/SharingNotebooks.git`. Yours of course will be different; please keep this in mind when creating a repository under your Github account.  
+:::
+
+# Cloning to a local directory 
+
+The steps to clone the project to a local directory are:
+
+1. Make sure your Github account allows authentication via ssh: run `ssh -T git@github.com` and see if the output message mentions your username.
+1. Change to a base directory, e.g. the one where you keep your projects. 
+1. Create a local directory with the same name as your repository (`SharingNotebooks`)
+1. Change to this directory. 
+1. Run `git clone https://github.com/rafaeldcsantos/SharingNotebooks.git .` -- make sure you have the dot (`.`) at the end of the command, and use **your** remote repository URL. If this command is successfull, the files `LICENSE` and `README.md`, which were created when we created the repository, will be downloaded to the current directory.
+
+# Updating the local files
+
+1. Run the command `touch .nojekyll` or similar -- this will create an empty file named `.nojekyll` to avoid some automation processes on Github.
+1. Edit the `README.md` just to make some noticeable changes. 
+1. Run `git add .` to prepare all new and modified files (but not the deleted files) to upload to Github.
+1. Run `git commit -m "Your commit message here"` to commit the changes with a comment.
+1. Run `git remote set-url origin git@github.com:rafaeldcsantos/SharingNotebooks.git` -- this will update the URL of the remote repository named origin to the specified URL. This command will allow you to push changes to Github using ssh.<br> Make sure you use your username and repository name!
+1. Run `git push -u origin main` to push the changes to Github.
+1. Check your repository in Github for the changes you did in the file `README.md`.
+
+From that point on, all changes you do to any file in the work directory can be updated with:
+
+1. `git add .`
+1. `git commit -m "Add a comment here"`
+1. `git push origin main`
+
+# Creating a Quarto Document
+
+Use Visual Code Studio to create a file with extension `.qmd` in the directory we ran the git commands. The `.qmd` file is a pure text file; any editor could be used, but Visual Code Studio is a good, free IDE which integrates nicely with Quarto.
+
+Create the file with the menu option 
+`File`/`New File`/`Quarto Document`. A simple boilerplate file will be created. 
+
+::: {.callout-note}
+Quarto can be used to create complex multi-document HTML pages, interactive notebooks, even presentations. Please refer to [its guide](https://quarto.org/docs/guide/) for examples. For this example we will create a simple page using [Markdown](https://quarto.org/docs/authoring/markdown-basics.html) and Quarto extensions.
+:::
+
+Add some Markdown code to the file and save it with a descriptive filename (in our example, `Intro.qmd`) -- the `.qmd` extension is used for Quarto Markdown files, a variant of Markdown that is specifically designed to work with Quarto. 
+
+Quarto files will be converted to HTML (HyperText Markup Language), which is the markup language for documents that will be displayed in web browsers. In most cases we can to provide additional instructions on how the files will be converted through instructions in a `_quarto.yml` file. 
+
+Create a `_quarto.yml` in the same directory where the `Intro.qmd` is locate. Its contents should be:
+ 
+```
+project:
+  output-dir: docs
+```
+
+These instructions basically ensure that all results from the conversion will be stored in the directory `docs` under the working directory. This is the same directory we used to indicate which is the destination directory for the pages we've set up in Github (figure XX)
 
 
-# ERRORROR
+Another important step is to give Quarto instructions on how the conversion from `.qmd` file to `.html` where the 
+
+# yyyy
+
+Now we need to convert this `.qmd` file to `.html` for displaying in a browser. In Visual Studio Code click on the `Preview` button (10). If all Quarto tools are installed correctly and there is no error on the Markdown file it will be converted to HTML, with success or error messages displayed in the terminal (11) and rendered result displayed in the Preview window (12): 
+
+![](Resources/VSCode.webp){.lightbox}
+
+Now that we have 
+
+# xxxxxx
+
+In this example the Github user name is `rafaeldcsantos` and the repository is `SharingNotebooks`. These are used to compose the remote repository URL:  `https://github.com/rafaeldcsantos/SharingNotebooks.git`. Yours of course will be different; please keep this in mind when creating a repository under your Github account.  
+:::
 
 
-Agora tenho um link para ele: https://github.com/rafaeldcsantos/PopSci.git
-ou copiamos da ur
-Mostrar menu de copiar.
-4) Na linha de comando ou onde preferir
-Ir para um diretorio base, o meu e /home/rafael/code
-Dentro dele criar um com nome compativel
-mkdir /Users/rafael/Dropbox/Code/SharingNotebooks
-CD para este
-
-Teste ssh com
-  ssh -T git@github.com
-  Hi rafaeldcsantos! You've successfully authenticated, but GitHub does not provide shell access.
-
-git clone https://github.com/rafaeldcsantos/SharingNotebooks.git .
-Devem apareceer o LICENSE e README.md
-
-touch .nojekyll
-
- 9950  Edit README.md
- 9951  git add .
- 9952  git commit -m "Your commit message here"
-
-git remote set-url origin git@github.com:rafaeldcsantos/SharingNotebooks.git
-
-git push -u origin main funcionou!
-
-======================
-Agora criar o notebook.
-Visual Code Studio
-
-File/New File/Quarto Document
 
 Change to dhis:
 
---------------------------------------------------------
-
+----------------------------------
+---
+title: "Sharing Notebooks"
+subtitle: "How to create a Quarto-based notebook using Visual Studio Code and share it in Github"
+lightbox: true
+toc: true
+format: html
+---
 
 
 --------------------------------------------------------
@@ -94,19 +147,7 @@ Create yml:
 
 Then update:
 
-git add .
-git commit -m "Add index.html to docs folder"
-git push origin main
+
 
 OK!
-
-
-git add .:
-This command stages all changes in the current directory and its subdirectories for the next commit. The dot (.) represents the current directory. When you run git add ., Git adds all modified files and new files (but not deleted files) to the staging area.
-git commit -m "Add index.html to docs folder":
-This command creates a new commit with the changes staged in the previous step. The -m flag allows you to specify a commit message inline. In this case, the commit message is "Add index.html to docs folder", which describes the changes made in the commit.
-git push origin main:
-This command pushes the commits in your local main branch to the remote repository (origin), which is typically your GitHub repository. It updates the main branch on GitHub with the commits you've made locally.
-
-
 
