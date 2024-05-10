@@ -112,14 +112,18 @@ Now we need to convert this `.qmd` file to `.html` for displaying in a browser. 
 Now that we have the `.html` file generated from the `.qmd` file we need to push our project back to GitHub. Just run these commands:
 
 1. `git add .`
-1. `git commit -m "Be sure to use meaningful comments!"`
+1. `git commit -m "Be sure to use meaningful comments"`
 1. `git push origin main`
 
 Now open the URL []() to see the rendered file as a GitHub page!
 
+:::{.callout-warning}
+When you commit your changes to GitHub 
+:::
+
 # In case
 
 In this example the GitHub user name is `rafaeldcsantos` and the repository is `SharingNotebooks`. These are used to compose the remote repository URL:  `https://github.com/rafaeldcsantos/SharingNotebooks.git`. Yours of course will be different; please keep this in mind when creating a repository under your GitHub account.  
-:::
+
 
 
