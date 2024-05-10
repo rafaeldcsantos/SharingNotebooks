@@ -50,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#creating-a-repository-on-github" id="toc-creating-a-repository-on-github" class="nav-link" data-scroll-target="#creating-a-repository-on-github">Creating a repository on Github</a></li>
+  <li><a href="#creating-a-repository-on-github" id="toc-creating-a-repository-on-github" class="nav-link" data-scroll-target="#creating-a-repository-on-github">Creating a repository on GitHub</a></li>
   <li><a href="#cloning-to-a-local-directory" id="toc-cloning-to-a-local-directory" class="nav-link" data-scroll-target="#cloning-to-a-local-directory">Cloning to a local directory</a></li>
   <li><a href="#updating-the-local-files" id="toc-updating-the-local-files" class="nav-link" data-scroll-target="#updating-the-local-files">Updating the local files</a></li>
   <li><a href="#creating-a-quarto-document" id="toc-creating-a-quarto-document" class="nav-link" data-scroll-target="#creating-a-quarto-document">Creating a Quarto Document</a></li>
@@ -64,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Sharing Notebooks</h1>
-<p class="subtitle lead">How to create a Quarto-based notebook using Visual Studio Code and share it in Github</p>
+<p class="subtitle lead">How to create a Quarto-based notebook using Visual Studio Code and share it in GitHub</p>
 </div>
 
 
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="about" class="level1">
 <h1>About</h1>
-<p>This document shows the steps required to create a Github repository, create a site based on it, clone the repository, add content using Visual Study Code and Quatro and push it back to Github so the content can be served as an interactive notebook.</p>
+<p>This document shows the steps required to create a GitHub repository, create a site based on it, clone the repository, add content using Visual Study Code and Quatro and push it back to GitHub so the content can be served as an interactive notebook.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -101,21 +101,21 @@ Warning
 <section id="prerequisites" class="level1">
 <h1>Prerequisites</h1>
 <ul>
-<li>Have a <a href="https://github.com">github account</a> configured so you can connect via SSH (see <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a> and <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Adding a new SSH key to your GitHub account</a>, and <a href="https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key">Push to GitHub without a password using ssh-key</a> in case of errors).</li>
+<li>Have a <a href="https://github.com">GitHub account</a> configured so you can connect via SSH (see <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a> and <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Adding a new SSH key to your GitHub account</a>, and <a href="https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key">Push to GitHub without a password using ssh-key</a> in case of errors).</li>
 <li>Install the <a href="https://quarto.org/docs/get-started/">Quarto</a> document authoring system.</li>
 <li>Install the <a href="https://code.visualstudio.com/download">Visual Studio Code</a> Integrated Development Environment (IDE) and the <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto VS Code Extension</a>.</li>
 </ul>
 </section>
 <section id="creating-a-repository-on-github" class="level1">
-<h1>Creating a repository on Github</h1>
-<p>Go to your <a href="https://github.com">Github account</a>, click on the Plus icon (see <a href="#fig-settings">Github main window</a>) and create a New Repository (1).</p>
+<h1>Creating a repository on GitHub</h1>
+<p>Go to your <a href="https://github.com">GitHub account</a>, click on the Plus icon (see <a href="#fig-settings">GitHub main window</a>) and create a New Repository (1).</p>
 <div id="fig-github" class="lightbox quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-github-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Resources/github.webp" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="Resources/github.webp" class="img-fluid figure-img"></a>
+<a href="Resources/github.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="Resources/github.webp" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-github-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Github main window
+Figure&nbsp;1: GitHub main window
 </figcaption>
 </figure>
 </div>
@@ -123,7 +123,7 @@ Figure&nbsp;1: Github main window
 <div id="fig-newrepo-empty" class="lightbox quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-newrepo-empty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="Resources/newrepo-empty.webp" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="Resources/newrepo-empty.webp" class="img-fluid figure-img"></a>
+<a href="Resources/newrepo-empty.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="Resources/newrepo-empty.webp" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-newrepo-empty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Creating a new repository (empty)
@@ -133,7 +133,7 @@ Figure&nbsp;2: Creating a new repository (empty)
 <p>Figure <a href="#fig-newrepo-filled">Creating a new repository (filled)</a> shows the page with the new repository information.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Resources/newrepo-filled.webp" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Creating a new repository (filled)"><img src="Resources/newrepo-filled.webp" class="img-fluid figure-img" alt="Creating a new repository (filled)"></a></p>
+<p><a href="Resources/newrepo-filled.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Creating a new repository (filled)"><img src="Resources/newrepo-filled.webp" class="img-fluid figure-img" alt="Creating a new repository (filled)"></a></p>
 <figcaption>Creating a new repository (filled)</figcaption>
 </figure>
 </div>
@@ -157,7 +157,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In this example the Github user name is <code>rafaeldcsantos</code> and the repository is <code>SharingNotebooks</code>. These are used to compose the remote repository URL: <code>https://github.com/rafaeldcsantos/SharingNotebooks.git</code>. Yours of course will be different; please keep this in mind when creating a repository under your Github account.</p>
+<p>In this example the GitHub user name is <code>rafaeldcsantos</code> and the repository is <code>SharingNotebooks</code>. These are used to compose the remote repository URL: <code>https://github.com/rafaeldcsantos/SharingNotebooks.git</code>. Yours of course will be different; please keep this in mind when creating a repository under your GitHub account.</p>
 </div>
 </div>
 </section>
@@ -165,7 +165,7 @@ Note
 <h1>Cloning to a local directory</h1>
 <p>The steps to clone the project to a local directory are:</p>
 <ol type="1">
-<li>Make sure your Github account allows authentication via ssh: run <code>ssh -T git@github.com</code> and see if the output message mentions your username.</li>
+<li>Make sure your GitHub account allows authentication via ssh: run <code>ssh -T git@github.com</code> and see if the output message mentions your username.</li>
 <li>Change to a base directory, e.g.&nbsp;the one where you keep your projects.</li>
 <li>Create a local directory with the same name as your repository (<code>SharingNotebooks</code>)</li>
 <li>Change to this directory.</li>
@@ -175,13 +175,13 @@ Note
 <section id="updating-the-local-files" class="level1">
 <h1>Updating the local files</h1>
 <ol type="1">
-<li>Run the command <code>touch .nojekyll</code> or similar – this will create an empty file named <code>.nojekyll</code> to avoid some automation processes on Github.</li>
+<li>Run the command <code>touch .nojekyll</code> or similar – this will create an empty file named <code>.nojekyll</code> to avoid some automation processes on GitHub.</li>
 <li>Edit the <code>README.md</code> just to make some noticeable changes.</li>
-<li>Run <code>git add .</code> to prepare all new and modified files (but not the deleted files) to upload to Github.</li>
+<li>Run <code>git add .</code> to prepare all new and modified files (but not the deleted files) to upload to GitHub.</li>
 <li>Run <code>git commit -m "Your commit message here"</code> to commit the changes with a comment.</li>
-<li>Run <code>git remote set-url origin git@github.com:rafaeldcsantos/SharingNotebooks.git</code> – this will update the URL of the remote repository named origin to the specified URL. This command will allow you to push changes to Github using ssh.<br> Make sure you use your username and repository name!</li>
-<li>Run <code>git push -u origin main</code> to push the changes to Github.</li>
-<li>Check your repository in Github for the changes you did in the file <code>README.md</code>.</li>
+<li>Run <code>git remote set-url origin git@github.com:rafaeldcsantos/SharingNotebooks.git</code> – this will update the URL of the remote repository named origin to the specified URL. This command will allow you to push changes to GitHub using ssh.<br> Make sure you use your username and repository name!</li>
+<li>Run <code>git push -u origin main</code> to push the changes to GitHub.</li>
+<li>Check your repository in GitHub for the changes you did in the file <code>README.md</code>.</li>
 </ol>
 <p>From that point on, all changes you do to any file in the work directory can be updated with:</p>
 <ol type="1">
@@ -212,7 +212,7 @@ Note
 <p>Create a <code>_quarto.yml</code> in the same directory where the <code>Intro.qmd</code> is locate. Its contents should be:</p>
 <pre><code>project:
   output-dir: docs</code></pre>
-<p>These instructions basically ensure that all results from the conversion will be stored in the directory <code>docs</code> under the working directory. This is the same directory we used to indicate which is the destination directory for the pages we’ve set up in Github (figure XX)</p>
+<p>These instructions basically ensure that all results from the conversion will be stored in the directory <code>docs</code> under the working directory. This is the same directory we used to indicate which is the destination directory for the pages we’ve set up in GitHub (figure XX)</p>
 <p>Another important step is to give Quarto instructions on how the conversion from <code>.qmd</code> file to <code>.html</code> where the</p>
 </section>
 <section id="yyyy" class="level1">
@@ -223,7 +223,7 @@ Note
 </section>
 <section id="xxxxxx" class="level1">
 <h1>xxxxxx</h1>
-<p>In this example the Github user name is <code>rafaeldcsantos</code> and the repository is <code>SharingNotebooks</code>. These are used to compose the remote repository URL: <code>https://github.com/rafaeldcsantos/SharingNotebooks.git</code>. Yours of course will be different; please keep this in mind when creating a repository under your Github account.<br>
+<p>In this example the GitHub user name is <code>rafaeldcsantos</code> and the repository is <code>SharingNotebooks</code>. These are used to compose the remote repository URL: <code>https://github.com/rafaeldcsantos/SharingNotebooks.git</code>. Yours of course will be different; please keep this in mind when creating a repository under your GitHub account.<br>
 :::</p>
 <p>Change to dhis:</p>
 <hr>
@@ -232,7 +232,7 @@ Note
 <p>Then update:</p>
 <p>OK!</p>
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Github main window</span>
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: GitHub main window</span>
 <span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: Creating a new repository (empty)</span>
 <span class="glightbox-desc lightbox-desc-3">Creating a new repository (filled)</span>
 </div>
@@ -650,7 +650,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

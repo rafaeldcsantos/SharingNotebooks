@@ -1,6 +1,6 @@
 ---
 title: "Sharing Notebooks"
-subtitle: "How to create a Quarto-based notebook using Visual Studio Code and share it in Github"
+subtitle: "How to create a Quarto-based notebook using Visual Studio Code and share it in GitHub"
 lightbox: true
 toc: true
 format: html
@@ -8,7 +8,7 @@ format: html
 
 # About
 
-This document shows the steps required to create a Github repository, create a site based on it, clone the repository, add content using Visual Study Code and Quatro and push it back to Github so the content can be served as an interactive notebook.
+This document shows the steps required to create a GitHub repository, create a site based on it, clone the repository, add content using Visual Study Code and Quatro and push it back to GitHub so the content can be served as an interactive notebook.
 
 :::{.callout-warning}
 This document is still under construction! Come back in a few days.
@@ -16,15 +16,15 @@ This document is still under construction! Come back in a few days.
 
 # Prerequisites
 
-* Have a [github account](https://github.com) configured so you can connect via SSH (see [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) and [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), and [Push to GitHub without a password using ssh-key](https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key) in case of errors).
+* Have a [GitHub account](https://github.com) configured so you can connect via SSH (see [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) and [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), and [Push to GitHub without a password using ssh-key](https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key) in case of errors).
 * Install the [Quarto](https://quarto.org/docs/get-started/) document authoring system.
 * Install the [Visual Studio Code](https://code.visualstudio.com/download) Integrated Development Environment (IDE) and the [Quarto VS Code Extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto).
 
-# Creating a repository on Github
+# Creating a repository on GitHub
 
-Go to your [Github account](https://github.com), click on the Plus icon (see [Github main window](#fig-settings)) and create a New Repository (1).
+Go to your [GitHub account](https://github.com), click on the Plus icon (see [GitHub main window](#fig-settings)) and create a New Repository (1).
 
-![Github main window](Resources/github.webp){.lightbox #fig-github}
+![GitHub main window](Resources/github.webp){.lightbox #fig-github}
 
 Figure [Creating a new repository](#fig-newrepo-empty) shows the page that asks for the new repository information. 
 Fill the repository name (2), choose `Add a README file` (3) and choose a licence (4):
@@ -57,14 +57,14 @@ In the `Source` section (8) chose `Deploy from a branch`, and for `Branch` selec
 Clicking on the repository name should bring you back to the main repository window. 
 
 ::: {.callout-note}
-In this example the Github user name is `rafaeldcsantos` and the repository is `SharingNotebooks`. These are used to compose the remote repository URL:  `https://github.com/rafaeldcsantos/SharingNotebooks.git`. Yours of course will be different; please keep this in mind when creating a repository under your Github account.  
+In this example the GitHub user name is `rafaeldcsantos` and the repository is `SharingNotebooks`. These are used to compose the remote repository URL:  `https://github.com/rafaeldcsantos/SharingNotebooks.git`. Yours of course will be different; please keep this in mind when creating a repository under your GitHub account.  
 :::
 
 # Cloning to a local directory 
 
 The steps to clone the project to a local directory are:
 
-1. Make sure your Github account allows authentication via ssh: run `ssh -T git@github.com` and see if the output message mentions your username.
+1. Make sure your GitHub account allows authentication via ssh: run `ssh -T git@github.com` and see if the output message mentions your username.
 1. Change to a base directory, e.g. the one where you keep your projects. 
 1. Create a local directory with the same name as your repository (`SharingNotebooks`)
 1. Change to this directory. 
@@ -72,13 +72,13 @@ The steps to clone the project to a local directory are:
 
 # Updating the local files
 
-1. Run the command `touch .nojekyll` or similar -- this will create an empty file named `.nojekyll` to avoid some automation processes on Github.
+1. Run the command `touch .nojekyll` or similar -- this will create an empty file named `.nojekyll` to avoid some automation processes on GitHub.
 1. Edit the `README.md` just to make some noticeable changes. 
-1. Run `git add .` to prepare all new and modified files (but not the deleted files) to upload to Github.
+1. Run `git add .` to prepare all new and modified files (but not the deleted files) to upload to GitHub.
 1. Run `git commit -m "Your commit message here"` to commit the changes with a comment.
-1. Run `git remote set-url origin git@github.com:rafaeldcsantos/SharingNotebooks.git` -- this will update the URL of the remote repository named origin to the specified URL. This command will allow you to push changes to Github using ssh.<br> Make sure you use your username and repository name!
-1. Run `git push -u origin main` to push the changes to Github.
-1. Check your repository in Github for the changes you did in the file `README.md`.
+1. Run `git remote set-url origin git@github.com:rafaeldcsantos/SharingNotebooks.git` -- this will update the URL of the remote repository named origin to the specified URL. This command will allow you to push changes to GitHub using ssh.<br> Make sure you use your username and repository name!
+1. Run `git push -u origin main` to push the changes to GitHub.
+1. Check your repository in GitHub for the changes you did in the file `README.md`.
 
 From that point on, all changes you do to any file in the work directory can be updated with:
 
@@ -108,7 +108,7 @@ project:
   output-dir: docs
 ```
 
-These instructions basically ensure that all results from the conversion will be stored in the directory `docs` under the working directory. This is the same directory we used to indicate which is the destination directory for the pages we've set up in Github (figure XX)
+These instructions basically ensure that all results from the conversion will be stored in the directory `docs` under the working directory. This is the same directory we used to indicate which is the destination directory for the pages we've set up in GitHub (figure XX)
 
 
 Another important step is to give Quarto instructions on how the conversion from `.qmd` file to `.html` where the 
@@ -123,7 +123,7 @@ Now that we have
 
 # xxxxxx
 
-In this example the Github user name is `rafaeldcsantos` and the repository is `SharingNotebooks`. These are used to compose the remote repository URL:  `https://github.com/rafaeldcsantos/SharingNotebooks.git`. Yours of course will be different; please keep this in mind when creating a repository under your Github account.  
+In this example the GitHub user name is `rafaeldcsantos` and the repository is `SharingNotebooks`. These are used to compose the remote repository URL:  `https://github.com/rafaeldcsantos/SharingNotebooks.git`. Yours of course will be different; please keep this in mind when creating a repository under your GitHub account.  
 :::
 
 
@@ -133,7 +133,7 @@ Change to dhis:
 ----------------------------------
 ---
 title: "Sharing Notebooks"
-subtitle: "How to create a Quarto-based notebook using Visual Studio Code and share it in Github"
+subtitle: "How to create a Quarto-based notebook using Visual Studio Code and share it in GitHub"
 lightbox: true
 toc: true
 format: html
