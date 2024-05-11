@@ -10,9 +10,6 @@ format: html
 
 This document shows the steps required to create a GitHub repository, create a site based on it, clone the repository, add content using Visual Study Code and Quatro and push it back to GitHub so the content can be served as an interactive notebook.
 
-:::{.callout-warning}
-This document is still under construction! Come back in a few days.
-:::
 
 # Prerequisites
 
@@ -116,6 +113,11 @@ Now that we have the `.html` file generated from the `.qmd` file we need to push
 1. `git push origin main`
 
 Now open the URL [https://rafaeldcsantos.github.io/SharingNotebooks/Intro.html](https://rafaeldcsantos.github.io/SharingNotebooks/Intro.html) to see the rendered file as a GitHub page!
+
+:::{.callout-warning}
+After pushing the contents to GitHub, it may take a few minutes until the URL contents reflects our changes.
+:::
+
 
 # In case of problems
 
