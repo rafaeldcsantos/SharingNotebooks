@@ -103,11 +103,11 @@ project:
 
 These instructions basically ensure that all results from the conversion will be stored in the directory `docs` under the working directory. This is the same directory we used as the destination directory for the pages we've set up in GitHub (see Figure [Page settings for the repository](#fig-pages)). 
 
-# yyyy 
-
 Now we need to convert this `.qmd` file to `.html` for displaying in a browser. In Visual Studio Code (see Figure [Converting and displaying `.qmd` files in Visual Studio Code](#fig-runningquarto)) click on the `Preview` button (10). If all Quarto tools are installed correctly and there are no errors on the Markdown file it will be converted to HTML, and success or error messages will be displayed in the terminal (11) and rendered result displayed in the Preview window (12): 
 
 ![Converting and displaying `.qmd` files in Visual Studio Code](Resources/VSCode.webp){.lightbox #fig-runningquarto}
+
+# Pushing it back to GitHub
 
 Now that we have the `.html` file generated from the `.qmd` file we need to push our project back to GitHub. Just run these commands:
 
@@ -115,15 +115,14 @@ Now that we have the `.html` file generated from the `.qmd` file we need to push
 1. `git commit -m "Be sure to use meaningful comments"`
 1. `git push origin main`
 
-Now open the URL []() to see the rendered file as a GitHub page!
+Now open the URL [https://rafaeldcsantos.github.io/SharingNotebooks/Intro.html](https://rafaeldcsantos.github.io/SharingNotebooks/Intro.html) to see the rendered file as a GitHub page!
 
-:::{.callout-warning}
-When you commit your changes to GitHub 
-:::
+# In case of problems
 
-# In case
+Recheck the steps, and make sure you are using the right names for repositories, files and directories.
 
-In this example the GitHub user name is `rafaeldcsantos` and the repository is `SharingNotebooks`. These are used to compose the remote repository URL:  `https://github.com/rafaeldcsantos/SharingNotebooks.git`. Yours of course will be different; please keep this in mind when creating a repository under your GitHub account.  
+In this example the GitHub user name is `rafaeldcsantos` and the repository is `SharingNotebooks`. These are used to compose the remote repository URL:  `https://github.com/rafaeldcsantos/SharingNotebooks.git`. We cloned the repository and added a local file named `Intro.qmd`, which was converted to `Intro.html` and stored in the directory `docs`. After pushing the local files to GitHub we can see the results in the URL [https://rafaeldcsantos.github.io/SharingNotebooks/Intro.html](https://rafaeldcsantos.github.io/SharingNotebooks/Intro.html).
+
 
 
 
